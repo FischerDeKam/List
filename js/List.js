@@ -1,5 +1,4 @@
 function appStart() {
-  console.log('This app was made by Fischer DeKam :)');
   checkSaveList();
 }
 
