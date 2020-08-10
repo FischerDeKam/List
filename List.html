@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/List.js"></script>
+  <link href="styles/List.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>List</title>
+</head>
+<body onload="appStart()">
+  <div id="saveSnackbar">Saved!</div>
+  <div id="loadDataSnackbar">Restored!</div>
+  <div>
+    <table id="display-table" cellspacing="0">
+      <tr>
+        <th>
+          <h1>List Items</h1>
+        </th>
+        <th>
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy saveBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+            <circle cx="12" cy="14" r="2" />
+            <polyline points="14 4 14 8 8 8 8 4" />
+          </svg>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="load()" class="icon icon-tabler icon-tabler-cloud-download loadBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4" />
+            <line x1="12" y1="13" x2="12" y2="22" />
+            <polyline points="9 19 12 22 15 19" />
+          </svg>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <h3>List Saved:</h3>
+        </td>
+        <td>
+          <p id="lastSaveDate"></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <hr>
+    <table class="input-table">
+      <tr>
+        <td class="input-label-cell">Item:</td>
+        <td class="input-box-cell">
+          <input type="text" id="listItem">
+        </td>
+        <td class="input-add-cell">
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="addRow()" class="icon icon-tabler icon-tabler-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
