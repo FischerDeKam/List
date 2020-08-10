@@ -6,4 +6,4 @@
 Thank you for using this app. If you have any feedback, bugs, or suggestions for new features feel free to message me.
 
 ### NOTE
-Intended for mobile use. Styling and UI enhancements for desktop use may be released later.
+Intended for mobile use only.
