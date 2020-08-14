@@ -93,3 +93,41 @@ h3 {
   width: 15%;
   text-align: center;
 }
+.app-header-table {
+  width: 100%;
+}
+.sidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 0.95;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.sidenav h1 {
+  padding-left: 0.5em;
+}
+.link-table {
+  width: 100%;
+}
+.link-cell {
+  height: 5em;
+  text-align: center;
+}
+.list-link {
+  font-size: 28px;
+  color: #ffffff;
+}
+.selected {
+  color: green !important;
+}

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="js/List.js"></script>
-  <link href="styles/List.css" rel="stylesheet">
+  <script src="../js/Grocery_List.js"></script>
+  <link href="../styles/Grocery_List.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <title>List</title>
 </head>
@@ -13,10 +13,18 @@
   <div id="saveSnackbar">Saved!</div>
   <div id="loadDataSnackbar">Restored!</div>
   <div>
-    <table id="display-table" cellspacing="0">
+    <table class="app-header-table">
       <tr>
         <th>
-          <h1>List Items</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="openNav()" class="icon icon-tabler icon-tabler-align-justified" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </th>
+        <th>
+          <h1>Groceries</h1>
         </th>
         <th>
           <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy saveBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -34,12 +42,30 @@
           </svg>
         </th>
       </tr>
+    </table>
+    <table id="display-table" cellspacing="0">
       <tr>
         <td>
           <h3>List Saved:</h3>
         </td>
         <td>
           <p id="listLastSaveDate"></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <h1>Lists</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="closeNav()" class="icon icon-tabler icon-tabler-circle-x closebtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="2.5" stroke="#F44336" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M10 10l4 4m0 -4l-4 4" />
+    </svg>
+    <hr>
+    <table class="link-table">
+      <tr>
+        <td class="link-cell">
+          <a href="Grocery_List.html" class="list-link selected">Grocery List</a>
         </td>
       </tr>
     </table>

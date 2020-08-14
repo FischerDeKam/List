@@ -25,8 +25,8 @@ function save() {
     var listToSave = document.getElementById("display-table").innerHTML;
     var d = new Date();
     listLastSaveDate = d.toLocaleString();
-    localStorage.setItem('SavedList', listToSave);
-    localStorage.setItem('ListLastSaveDate', listLastSaveDate);
+    localStorage.setItem('SavedGroceryList', listToSave);
+    localStorage.setItem('GroceryListLastSaveDate', listLastSaveDate);
     // sets the date on screen
     document.getElementById('listLastSaveDate').innerHTML = listLastSaveDate;
     // snackbar DIV
@@ -41,7 +41,7 @@ function save() {
 
 function load() {
   // Check for saved items
-  var loadSavedList = localStorage.getItem('SavedList');
+  var loadSavedList = localStorage.getItem('SavedGroceryList');
   // If there are any saved items, update html
   if (loadSavedList) {
     document.getElementById("display-table").innerHTML = loadSavedList;
@@ -54,8 +54,16 @@ function load() {
 }
 
 function checkSaveList() {
-  var savedLastSaveDate = localStorage.getItem('ListLastSaveDate');
+  var savedLastSaveDate = localStorage.getItem('GroceryListLastSaveDate');
   if (savedLastSaveDate) {
     document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
   }
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
