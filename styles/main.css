@@ -1,0 +1,22 @@
+body {
+  background-color: lightgrey;
+  margin-bottom: 60px;
+  font-family: 'Anton', sans-serif; 
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+
+.link-table {
+  width: 100%;
+}
+.link-cell {
+  height: 5em;
+  text-align: center;
+}
+.list-link {
+  font-size: 2em;
+  color: #000000;
+}
