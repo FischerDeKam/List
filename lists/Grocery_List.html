@@ -16,7 +16,7 @@
   <div>
     <table class="app-header-table">
       <tr>
-        <th>
+        <th class="menu-button">
           <svg xmlns="http://www.w3.org/2000/svg" onclick="openNav()" class="icon icon-tabler icon-tabler-align-justified" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <line x1="4" y1="6" x2="20" y2="6" />
@@ -24,22 +24,15 @@
             <line x1="4" y1="18" x2="20" y2="18" />
           </svg>
         </th>
-        <th>
+        <th class="list-label">
           <h1>Groceries</h1>
         </th>
-        <th>
-          <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy saveBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <th class="save-button">
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
             <circle cx="12" cy="14" r="2" />
             <polyline points="14 4 14 8 8 8 8 4" />
-          </svg>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <svg xmlns="http://www.w3.org/2000/svg" onclick="load()" class="icon icon-tabler icon-tabler-cloud-download loadBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4" />
-            <line x1="12" y1="13" x2="12" y2="22" />
-            <polyline points="9 19 12 22 15 19" />
           </svg>
         </th>
       </tr>
@@ -47,10 +40,10 @@
     <hr>
     <table id="date-table" callspacing="0">
       <tr>
-        <td>
+        <td class="list-saved-date-label">
           <h3>List Saved:</h3>
         </td>
-        <td>
+        <td class="list-saved-date">
           <p id="listLastSaveDate"></p>
         </td>
       </tr>
@@ -86,6 +79,11 @@
       <tr>
         <td class="link-cell">
           <a href="To_Do_List.html" class="list-link">To Do List</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="load-button" onclick="load()">Restore List</button>
         </td>
       </tr>
       <tr>
