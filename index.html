@@ -4,29 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="styles/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/list-favicon.png"/>
   <title>Home</title>
 </head>
 <body>
-  <h1>Lists</h1>
-  <hr>
+  <div class="title">Home</div>
   <table class="link-table">
     <tr>
-      <td class="link-cell">
-        <a href="lists/Grocery_List.html" class="list-link">Grocery List</a>
+      <td>
+        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 18em;">
+          <img src="images/Cart-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Cart">
+          <div class="card-body mx-auto">
+            <a href="lists/Grocery_List.html" class="btn btn-success btn-outline-dark btn-lg">Grocery List</a>
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
-      <td class="link-cell">
-        <a href="lists/Chores_List.html" class="list-link">Chores List</a>
+      <td>
+        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 18em;">
+          <img src="images/Chores-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Cart">
+          <div class="card-body mx-auto">
+            <a href="lists/Chores_List.html" class="btn btn-success btn-outline-dark btn-lg">Chores List</a>
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
-      <td class="link-cell">
-        <a href="lists/To_Do_List.html" class="list-link selected">To Do List</a>
+      <td>
+        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 18em;">
+          <img src="images/List-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Cart">
+          <div class="card-body mx-auto">
+            <a href="lists/To_Do_List.html" class="btn btn-success btn-outline-dark btn-lg">To Do List</a>
+          </div>
+        </div>
       </td>
     </tr>
   </table>

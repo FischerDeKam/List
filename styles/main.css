@@ -3,12 +3,11 @@ body {
   margin-bottom: 60px;
   font-family: 'Anton', sans-serif; 
 }
-h1 {
+
+.title {
   text-align: center;
   font-size: 3em;
 }
-
-
 .link-table {
   width: 100%;
 }
@@ -19,4 +18,8 @@ h1 {
 .list-link {
   font-size: 2em;
   color: #000000;
+}
+.card-image {
+  width: 5em;
+  height: 5em;
 }
