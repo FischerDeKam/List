@@ -24,6 +24,11 @@ body {
   height: 85%;
   font-size: 20px;
 }
+#editItem {
+  width: 100%;
+  height: 85%;
+  font-size: 20px;
+}
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #loadDataSnackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
@@ -121,6 +126,22 @@ body {
   width: 15%;
   text-align: center;
 }
+.edit-table {
+  height: 18px;
+  width: 100%;
+}
+.edit-label-cell {
+  width: 15%;
+  font-size: 20px;
+  text-align: center;
+}
+.edit-box-cell {
+  width: 70%;
+}
+.edit-add-cell {
+  width: 15%;
+  text-align: center;
+}
 .app-header-table {
   width: 100%;
 }
@@ -146,19 +167,30 @@ body {
   padding-left: 0.5em;
   padding-top: 0.5em;
 }
+.editSidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 0.95;
+}
+.editSidenav .closebtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.editSidenav h1 {
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
 .link-table {
   width: 100%;
-}
-.link-cell {
-  height: 5em;
-  text-align: center;
-}
-.list-link {
-  font-size: 28px;
-  color: #ffffff;
-}
-.selected {
-  color: green !important;
 }
 .menu-button {
   text-align: left;
@@ -184,4 +216,10 @@ body {
 .title {
   text-align: center;
   font-size: 3em;
+}
+.edit-icon {
+  float: right;
+}
+.trash-icon {
+  float: right;
 }
