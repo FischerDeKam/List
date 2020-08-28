@@ -6,7 +6,7 @@
 Thank you for using this app. If you have any feedback, bugs, or suggestions for new features feel free to message me.
 
 ### Sources
-Bootstrap: [Bootstrap](https://getbootstrap.com/)
+Bootstrap Styling: [getbootstrap.com](https://getbootstrap.com/)
 
 Google Fonts: [fonts.google.com](https://fonts.google.com/)
 
