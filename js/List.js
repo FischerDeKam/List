@@ -25,7 +25,7 @@ function deleteRow(obj) {
 }
 
 function save() {
-  var r = confirm("Overwrite save data?");
+  var r = confirm("Save List?");
   if (r == true) {
     var listToSave = document.getElementById('display-table').innerHTML;
     var d = new Date();
