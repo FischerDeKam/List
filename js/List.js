@@ -120,7 +120,7 @@ function displayDeleteSnackbar() {
 }
 
 function deleteList() {
-  var r = confirm("Confirm delete list?");
+  var r = confirm("Delete List?");
   if (r == true) {
     var listToDelete = document.getElementById('display-table').innerHTML;
     var dateToDelete = document.getElementById('listLastSaveDate').innerHTML;
