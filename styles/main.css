@@ -11,14 +11,6 @@ body {
 .link-table {
   width: 100%;
 }
-.link-cell {
-  height: 5em;
-  text-align: center;
-}
-.list-link {
-  font-size: 2em;
-  color: #000000;
-}
 .card-image {
   width: 5em;
   height: 5em;
