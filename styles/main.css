@@ -3,6 +3,9 @@ body {
   margin-bottom: 60px;
   font-family: 'Anton', sans-serif; 
 }
+a {
+  color: #607D8B;
+}
 
 .title {
   text-align: center;
