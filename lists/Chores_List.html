@@ -32,7 +32,7 @@
           <div class="title">Chores</div>
         </th>
         <th class="save-button pr-3">
-          <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy saveBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03A9F4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="save()" class="icon icon-tabler icon-tabler-device-floppy saveBtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
             <circle cx="12" cy="14" r="2" />
@@ -78,6 +78,16 @@
       <tr>
         <td>
           <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
+            <img src="../images/List-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="List Icon">
+            <div class="card-body">
+              <a href="To_Do_List.html" class="btn btn-lg btn-success btn-outline-dark btn-block">To Do List</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
             <img src="../images/Cart-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Cart Icon">
             <div class="card-body">
               <a href="Grocery_List.html" class="btn btn-lg btn-success btn-outline-dark btn-block">Grocery List</a>
@@ -95,16 +105,6 @@
           </div>
         </td>
       </tr> -->
-      <tr>
-        <td>
-          <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
-            <img src="../images/List-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="List Icon">
-            <div class="card-body">
-              <a href="To_Do_List.html" class="btn btn-lg btn-success btn-outline-dark btn-block">To Do List</a>
-            </div>
-          </div>
-        </td>
-      </tr>
       <tr>
         <td>
           <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
@@ -131,12 +131,38 @@
     <hr>
     <table class="input-table">
       <tr>
-        <td class="input-label-cell">Item:</td>
+        <td class="input-label-cell">Item</td>
         <td class="input-box-cell">
           <input type="text" id="listItem">
         </td>
         <td class="input-add-cell">
           <svg xmlns="http://www.w3.org/2000/svg" onclick="addRow()" class="icon icon-tabler icon-tabler-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="subitemSidenav" class="subitemSidenav">
+    <div id="deleteSnackbar">Deleted</div>
+    <h1>Add Item</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="closeSubitemNav()" class="icon icon-tabler icon-tabler-circle-x closebtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="2.5" stroke="#F44336" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M10 10l4 4m0 -4l-4 4" />
+    </svg>
+    <hr>
+    <p class="ml-3">Add an new item below the item selected</p>
+    <table class="subitem-input-table">
+      <tr>
+        <td class="subitem-input-label-cell pl-2">Item</td>
+        <td class="subitem-input-box-cell">
+          <input type="text" id="listSubitem">
+        </td>
+        <td class="subitem-input-add-cell">
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="addSubitem()" class="icon icon-tabler icon-tabler-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <line x1="12" y1="5" x2="12" y2="19" />
             <line x1="5" y1="12" x2="19" y2="12" />

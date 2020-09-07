@@ -15,7 +15,7 @@ hr {
 #display-table td {
   border-top: 1px solid black;
   padding-left: 0.5em;
-  width: 70%;
+  width: 69%;
 }
 #date-table {
   width: 100%;
@@ -25,6 +25,11 @@ hr {
   padding-left: 5px;
 }
 #listItem {
+  width: 100%;
+  height: 85%;
+  font-size: 20px;
+}
+#listSubitem {
   width: 100%;
   height: 85%;
   font-size: 20px;
@@ -126,6 +131,27 @@ hr {
   width: 15%;
   text-align: center;
 }
+.subitem-input-table {
+  height: 4em;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  /* background-color: grey; */
+}
+.subitem-input-label-cell {
+  width: 15%;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.subitem-input-box-cell {
+  width: 70%;
+}
+.subitem-input-add-cell {
+  width: 15%;
+  text-align: center;
+}
 .app-header-table {
   width: 100%;
 }
@@ -148,6 +174,28 @@ hr {
   right: 1em;
 }
 .sidenav h1 {
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+.subitemSidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 0.95;
+}
+.subitemSidenav .closebtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.subitemSidenav h1 {
   padding-left: 0.5em;
   padding-top: 0.5em;
 }
