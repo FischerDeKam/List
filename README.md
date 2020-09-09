@@ -5,7 +5,7 @@
 ### Fischer DeKam
 *Software Engineer*
 
-Thank you for using this app. If you have any feedback, bugs, or suggestions for new features feel free to message me.
+Thank you for using this app. If you have any feedback, bugs, or suggestions head over to the __Issues__ tab.
 
 ### Sources
 + Bootstrap Styling: [getbootstrap.com](https://getbootstrap.com/)
