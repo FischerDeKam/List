@@ -1,5 +1,6 @@
 var listType = '';
 var subItemIndex = 0;
+var listBadge = 0;
 
 function appStart(type) {
   listType = type;
@@ -48,24 +49,29 @@ function save() {
     var listToSave = document.getElementById('display-table').innerHTML;
     var d = new Date();
     listLastSaveDate = d.toLocaleString();
+    getBadgeValue();
     switch(listType) {
       case 'Grocery':
         localStorage.setItem('SavedGroceryList', listToSave);
         localStorage.setItem('GroceryListLastSaveDate', listLastSaveDate);
+        localStorage.setItem('SavedGroceryListBadge', listBadge);
         break;
       case 'Chores':
         localStorage.setItem('SavedChoresList', listToSave);
         localStorage.setItem('ChoresListLastSaveDate', listLastSaveDate);
+        localStorage.setItem('SavedChoresListBadge', listBadge);
         break;
       case 'ToDo':
         localStorage.setItem('SavedToDoList', listToSave);
         localStorage.setItem('ToDoListLastSaveDate', listLastSaveDate);
+        localStorage.setItem('SavedToDoListBadge', listBadge);
         break;
       default:
         console.log('save(): Type Error: ', listType);
         break;
     }
     document.getElementById('listLastSaveDate').innerHTML = listLastSaveDate;
+    document.getElementById('count-badge').innerHTML = listBadge;
     displaySaveSnackbar();
   }
 }
@@ -82,6 +88,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
+      var savedGroceryListBadge = localStorage.getItem('SavedGroceryListBadge');
+      if (savedGroceryListBadge) {
+        document.getElementById('count-badge').innerHTML = savedGroceryListBadge;
+      }
       break;
     case 'Chores':
       var loadSavedList = localStorage.getItem('SavedChoresList');
@@ -93,6 +103,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
+      var savedChoresListBadge = localStorage.getItem('SavedChoresListBadge');
+      if (savedChoresListBadge) {
+        document.getElementById('count-badge').innerHTML = savedChoresListBadge;
+      }
       break;
     case 'ToDo':
       var loadSavedList = localStorage.getItem('SavedToDoList');
@@ -103,6 +117,10 @@ function load() {
       if (savedLastSaveDate) {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
+      }
+      var savedToDoListBadge = localStorage.getItem('SavedToDoListBadge');
+      if (savedToDoListBadge) {
+        document.getElementById('count-badge').innerHTML = savedToDoListBadge;
       }
       break;
     default:
@@ -126,6 +144,17 @@ function openSubitemNav(obj) {
 
 function closeSubitemNav() {
   document.getElementById('subitemSidenav').style.width = "0";
+}
+
+function getBadgeValue() {
+  var table = document.getElementById('display-table');
+  if (table) {
+    listBadge = table.rows.length;
+  } else {
+    listBadge = 0;
+  }
+  var badge = document.getElementById('count-badge').innerHTML;
+  badge.innerHTML = listBadge;
 }
 
 function displayLoadSnackbar() {
@@ -159,6 +188,9 @@ function deleteList() {
         document.getElementById('listLastSaveDate').innerHTML = dateToDelete;
         localStorage.setItem('SavedGroceryList', listToDelete);
         localStorage.setItem('GroceryListLastSaveDate', dateToDelete);
+        getBadgeValue();
+        localStorage.setItem('SavedGroceryListBadge', listBadge);
+        document.getElementById('count-badge').innerHTML = listBadge;
         displayDeleteSnackbar();
         break;
       case 'Chores':
@@ -168,6 +200,9 @@ function deleteList() {
         document.getElementById('listLastSaveDate').innerHTML = dateToDelete;
         localStorage.setItem('SavedChoresList', listToDelete);
         localStorage.setItem('ChoresListLastSaveDate', dateToDelete);
+        getBadgeValue();
+        localStorage.setItem('SavedChoresListBadge', listBadge);
+        document.getElementById('count-badge').innerHTML = listBadge;
         displayDeleteSnackbar();
         break;
       case 'ToDo':
@@ -177,6 +212,9 @@ function deleteList() {
         document.getElementById('listLastSaveDate').innerHTML = dateToDelete;
         localStorage.setItem('SavedToDoList', listToDelete);
         localStorage.setItem('ToDoListLastSaveDate', dateToDelete);
+        getBadgeValue();
+        localStorage.setItem('SavedToDoListBadge', listBadge);
+        document.getElementById('count-badge').innerHTML = listBadge;
         displayDeleteSnackbar();
         break;
       default:

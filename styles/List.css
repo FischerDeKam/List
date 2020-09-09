@@ -230,3 +230,6 @@ hr {
 .trash-icon {
   float: right;
 }
+.badge {
+  font-size: 50% !important;
+}
