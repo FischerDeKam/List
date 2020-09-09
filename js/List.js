@@ -17,8 +17,8 @@ function addRow(rowNumber) {
   if (listItem.value !== "" || listSubitem.value !== "") {
     if (rowNumber >= 0) {
       var row = table.insertRow(rowNumber);
-      row.insertCell(0).innerHTML = listSubitem.value;
-      row.insertCell(1).innerHTML = arrowDownIcon + trashCan;
+      row.insertCell(0).innerHTML = '\xa0\xa0\xa0' + listSubitem.value;
+      row.insertCell(1).innerHTML = trashCan;
       document.getElementById("listSubitem").value = "";
     } else {
       var row = table.insertRow(rowCount);
