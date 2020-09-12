@@ -66,6 +66,10 @@ function save() {
         localStorage.setItem('ToDoListLastSaveDate', listLastSaveDate);
         localStorage.setItem('SavedToDoListBadge', listBadge);
         break;
+      case 'Other':
+        localStorage.setItem('SavedOtherList', listToSave);
+        localStorage.setItem('OtherListLastSaveDate', listLastSaveDate);
+        localStorage.setItem('SavedOtherListBadge', listBadge);
       default:
         console.log('save(): Type Error: ', listType);
         break;
@@ -121,6 +125,21 @@ function load() {
       var savedToDoListBadge = localStorage.getItem('SavedToDoListBadge');
       if (savedToDoListBadge) {
         document.getElementById('count-badge').innerHTML = savedToDoListBadge;
+      }
+      break;
+    case 'Other':
+      var loadSavedList = localStorage.getItem('SavedOtherList');
+      if (loadSavedList) {
+        document.getElementById('display-table').innerHTML = loadSavedList;
+      }
+      var savedLastSaveDate = localStorage.getItem('OtherListLastSaveDate');
+      if (savedLastSaveDate) {
+        document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
+        displayLoadSnackbar();
+      }
+      var savedOtherListBadge = localStorage.getItem('SavedOtherListBadge');
+      if (savedOtherListBadge) {
+        document.getElementById('count-badge').innerHTML = savedOtherListBadge;
       }
       break;
     default:
@@ -214,6 +233,18 @@ function deleteList() {
         localStorage.setItem('ToDoListLastSaveDate', dateToDelete);
         getBadgeValue();
         localStorage.setItem('SavedToDoListBadge', listBadge);
+        document.getElementById('count-badge').innerHTML = listBadge;
+        displayDeleteSnackbar();
+        break;
+      case 'Other':
+        listToDelete = '';
+        dateToDelete = '';
+        document.getElementById('display-table').innerHTML = listToDelete;
+        document.getElementById('listLastSaveDate').innerHTML = dateToDelete;
+        localStorage.setItem('SavedOtherList', listToDelete);
+        localStorage.setItem('OtherListLastSaveDate', dateToDelete);
+        getBadgeValue();
+        localStorage.setItem('SavedOtherListBadge', listBadge);
         document.getElementById('count-badge').innerHTML = listBadge;
         displayDeleteSnackbar();
         break;
