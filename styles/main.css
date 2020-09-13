@@ -1,6 +1,5 @@
 body {
   background-color: lightgrey;
-  margin-bottom: 60px;
   font-family: 'Anton', sans-serif; 
 }
 a {
@@ -17,4 +16,47 @@ a {
 .card-image {
   width: 5em;
   height: 5em;
+}
+.info-button {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+}
+.sidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0em;
+  left: 0em;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 0.95;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.sidenav h1 {
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+.sidenav hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-top-color: #FFFFFF;
+}
+.sidenav ul {
+  margin-bottom: 0em;
+  padding-left: 1em;
+}
+.sidenav .btn-lg {
+  font-size: 1em;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
