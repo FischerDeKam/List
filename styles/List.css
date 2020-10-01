@@ -1,7 +1,6 @@
 body {
-  background-color: lightgrey;
   margin-bottom: 60px;
-  font-family: 'Anton', sans-serif; 
+  font-family: 'Anton', sans-serif;
 }
 hr {
   margin-top: 0em;
@@ -34,7 +33,7 @@ hr {
   height: 85%;
   font-size: 20px;
 }
-/* The snackbar - position it at the bottom and in the middle of the screen */
+/* Snackbars */
 #loadDataSnackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   width: 120px; /* Set a default minimum width */
@@ -59,7 +58,6 @@ hr {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-/* The snackbar - position it at the bottom and in the middle of the screen */
 #saveSnackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   width: 100px; /* Set a default minimum width */
@@ -84,7 +82,6 @@ hr {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-/* The snackbar - position it at the bottom and in the middle of the screen */
 #deleteSnackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   width: 100px; /* Set a default minimum width */
@@ -110,13 +107,31 @@ hr {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+.card-image {
+  width: 3em;
+  height: 3em;
+}
+.title {
+  text-align: center;
+  font-size: 3em;
+}
+.badge {
+  font-size: 40% !important;
+}
+.link-table {
+  width: 100%;
+}
+.app-header-table {
+  width: 100%;
+}
+/* Input */
 .input-table {
   height: 4em;
   width: 100%;
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background-color: grey;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 .input-label-cell {
   width: 15%;
@@ -131,13 +146,81 @@ hr {
   width: 15%;
   text-align: center;
 }
+/* List */
+.list-label {
+  text-align: center;
+}
+.list-saved-date-label {
+  text-align: left;
+}
+.list-saved-date {
+  text-align: right;
+}
+/* Buttons */
+.menu-button {
+  text-align: left;
+  width: 10%;
+}
+.save-button {
+  text-align: right;
+  width: 10%;
+}
+/* Icons */
+.trash-icon {
+  float: right;
+}
+.subitem-icon {
+  float: right;
+}
+/* Sidenav */
+.sidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+.sidenav h1 {
+  padding-top: 0.25em;
+}
+/* Subitem Sidenav */
+.subitemSidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  color: white;
+  opacity: 1;
+}
+.subitemSidenav h1 {
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+.subitemSidenav .closebtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
 .subitem-input-table {
   height: 4em;
   width: 100%;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  /* background-color: grey; */
 }
 .subitem-input-label-cell {
   width: 15%;
@@ -152,84 +235,10 @@ hr {
   width: 15%;
   text-align: center;
 }
-.app-header-table {
-  width: 100%;
-}
-.sidenav {
-  height: 100%;
-  width: 0%; /* 0 width - change this with JavaScript */
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  color: white;
-  opacity: 0.95;
-}
-.sidenav .closebtn {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-.sidenav h1 {
-  padding-left: 0.5em;
-  padding-top: 0.5em;
-}
-.subitemSidenav {
-  height: 100%;
-  width: 0%; /* 0 width - change this with JavaScript */
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  color: white;
-  opacity: 0.95;
-}
-.subitemSidenav .closebtn {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-.subitemSidenav h1 {
-  padding-left: 0.5em;
-  padding-top: 0.5em;
-}
-.link-table {
-  width: 100%;
-}
-.menu-button {
-  text-align: left;
-  width: 10%;
-}
-.list-label {
-  text-align: center;
-}
-.save-button {
-  text-align: right;
-  width: 10%;
-}
-.list-saved-date-label {
-  text-align: left;
-}
-.list-saved-date {
-  text-align: right;
-}
-.card-image {
-  width: 4em;
-  height: 4em;
-}
-.title {
-  text-align: center;
-  font-size: 3em;
-}
-.trash-icon {
-  float: right;
-}
-.badge {
-  font-size: 50% !important;
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+    width: 50% !important;
+  }
 }

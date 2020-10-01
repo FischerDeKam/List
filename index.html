@@ -14,10 +14,26 @@
   <link rel="icon" type="image/png" href="images/list-favicon.png"/>
   <title>Home</title>
 </head>
-<body>
-  <div class="title">Home</div>
+<body class="bg-dark">
+  <div class="title text-warning">
+    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" />
+      <line x1="10" y1="10" x2="10.01" y2="10" />
+      <line x1="14" y1="10" x2="14.01" y2="10" />
+      <path d="M10 14a3.5 3.5 0 0 0 4 0" />
+    </svg>
+    Home
+    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" />
+      <line x1="10" y1="10" x2="10.01" y2="10" />
+      <line x1="14" y1="10" x2="14.01" y2="10" />
+      <path d="M10 14a3.5 3.5 0 0 0 4 0" />
+    </svg>
+  </div>
   <div class="info-button">
-    <svg xmlns="http://www.w3.org/2000/svg" onclick="openPatchNotesSideNav()" class="icon icon-tabler icon-tabler-info-circle" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="openPatchNotesSideNav()" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#17a2b8" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z"/>
       <circle cx="12" cy="12" r="9" />
       <line x1="12" y1="8" x2="12.01" y2="8" />
@@ -33,80 +49,109 @@
     </button>
   </div> -->
   <!-- End Template -->
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    List App is changing hosts! Here is the new link: <a href="https://fischerdekam.github.io/List/" class="alert-link">https://fischerdekam.github.io/List/</a>. The old link will be active till Oct 1, 2020. Please copy your lists over to the new site before then.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
   <!-- End Alert -->
   <table class="link-table">
     <tr>
       <td>
-        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
-          <img src="images/List-Icon-2.png" class="card-img-top card-image mx-auto mt-3" alt="List Icon">
+        <div class="card mx-auto bg-secondary border-dark mb-1" style="width: 85%;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="card-img-top card-image mx-auto mt-3" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M9 5H7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2V7a2 2 0 0 0 -2 -2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="2" />
+            <path d="M9 14l2 2l4 -4" />
+          </svg>
           <div class="card-body">
-            <a href="lists/To_Do_List.html" class="btn btn-success btn-outline-dark btn-lg btn-block">To Do List</a>
+            <a href="lists/To_Do_List.html" class="btn btn-dark btn-outline-warning btn-lg btn-block">To Do List</a>
           </div>
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
-          <img src="images/Cart-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Cart Icon">
+        <div class="card mx-auto bg-secondary border-dark mb-1" style="width: 85%;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="card-img-top card-image mx-auto mt-3" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <circle cx="9" cy="19" r="2" />
+            <circle cx="17" cy="19" r="2" />
+            <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+          </svg>
           <div class="card-body">
-            <a href="lists/Grocery_List.html" class="btn btn-success btn-outline-dark btn-lg btn-block">Grocery List</a>
+            <a href="lists/Grocery_List.html" class="btn btn-dark btn-outline-warning btn-lg btn-block">Grocery List</a>
           </div>
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
-          <img src="images/Chores-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Chores Icon">
+        <div class="card mx-auto bg-secondary border-dark mb-1" style="width: 85%;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="card-img-top card-image mx-auto mt-3" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6-6a6 6 0 0 1 -8 -8l3.5 3.5" />
+          </svg>
           <div class="card-body">
-            <a href="lists/Chores_List.html" class="btn btn-success btn-outline-dark btn-lg btn-block">Chores List</a>
+            <a href="lists/Chores_List.html" class="btn btn-dark btn-outline-warning btn-lg btn-block">Chores List</a>
           </div>
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="card mx-auto text-white bg-info border-dark mb-1" style="width: 85%;">
-          <img src="images/List-Icon.png" class="card-img-top card-image mx-auto mt-3" alt="Other List Icon">
+        <div class="card mx-auto bg-secondary border-dark mb-1" style="width: 85%;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="card-img-top card-image mx-auto mt-3" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF9800" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M9 5H7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2V7a2 2 0 0 0 -2 -2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="2" />
+            <line x1="9" y1="12" x2="9.01" y2="12" />
+            <line x1="13" y1="12" x2="15" y2="12" />
+            <line x1="9" y1="16" x2="9.01" y2="16" />
+            <line x1="13" y1="16" x2="15" y2="16" />
+          </svg>
           <div class="card-body">
-            <a href="lists/Other_List.html" class="btn btn-lg btn-success btn-outline-dark btn-block">Other List</a>
+            <a href="lists/Other_List.html" class="btn btn-lg btn-dark btn-outline-warning btn-block">Other List</a>
           </div>
         </div>
       </td>
     </tr>
   </table>
   <div id="PatchNotesSidenav" class="sidenav">
-    <h1>Patch Notes</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" onclick="closePatchNotesSideNav()" class="icon icon-tabler icon-tabler-circle-x closebtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F44336" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <h1 class="title">Patch Notes</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="closePatchNotesSideNav()" class="closebtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#dc3545" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z"/>
       <circle cx="12" cy="12" r="9" />
       <path d="M10 10l4 4m0 -4l-4 4" />
     </svg>
     <hr>
     <div class="btn btn-outline-none btn-lg btn-block">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#607D8B" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#607D8B" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z"/>
         <path d="M9 19c-4.286 1.35-4.286-1.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21a4.192 4.192 0 0 0 -.08 -3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 0 0 4 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" />
       </svg>
-      <a href="https://github.com/FischerDeKam/List" class="alert-link mx-auto">https://github.com/FischerDeKam/List</a>
+      <a href="https://github.com/FischerDeKam/List" class="alert-link mx-auto"><u>https://github.com/FischerDeKam/List</u></a>
     </div>
     <hr>
     <table class="link-table">
       <tr>
         <td>
           <div class="card mx-auto text-white bg-info mb-1" style="width: 85%;">
+            <div class="card-header">October 1, 2020</div>
+            <div class="card-body">
+              <ul>
+                <li>New color theme</li>
+                <li>New icons</li>
+                <li>Added Desktop and Tablet support</li>
+                <li>Discontinued hosting with Netlify</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="card mx-auto text-white bg-info mb-1" style="width: 85%;">
             <div class="card-header">September 12, 2020</div>
             <div class="card-body">
               <ul>
-                <li>Added Patch Notes</li>
-                <li>Reduced the size of the close buttons</li>
+                <li>Added patch notes</li>
                 <li>Moved GitHub link</li>
               </ul>
             </div>
