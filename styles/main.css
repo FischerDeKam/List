@@ -52,6 +52,9 @@ a {
   font-size: 1em;
 }
 /* Bootstrap Card */
+.card {
+  width: 85%;
+}
 .card-image {
   width: 3em;
   height: 3em;
