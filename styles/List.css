@@ -45,7 +45,7 @@ hr {
   vertical-align: middle;
   border-radius: 2px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 30px;
   left: 50%;
   font-size: 26px;
@@ -93,7 +93,7 @@ hr {
   vertical-align: middle;
   border-radius: 2px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 30px;
   left: 50%;
   font-size: 26px;
@@ -195,6 +195,11 @@ hr {
   top: 0.5em;
   right: 0.5em;
 }
+.sidenav .settingsBtn {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
 .sidenav h1 {
   padding-top: 0.25em;
 }
@@ -212,8 +217,7 @@ hr {
   opacity: 1;
 }
 .subitemSidenav h1 {
-  padding-left: 0.5em;
-  padding-top: 0.5em;
+  padding-top: 0.25em;
 }
 .subitemSidenav .closebtn {
   position: absolute;
@@ -240,7 +244,28 @@ hr {
   width: 15%;
   text-align: center;
 }
+/* Settings Sidenav */
+.settingsSidenav {
+  height: 100%;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  opacity: 1;
+}
+.settingsSidenav .closebtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+.settingsSidenav h1 {
+  padding-top: 0.25em;
+}
 
+/* Screen Size Settings */
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (orientation: landscape) and (min-width: 576px) {
   #display-table td {

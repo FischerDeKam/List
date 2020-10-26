@@ -66,6 +66,7 @@ a {
   font-size: 1.2em;
 }
 
+/* Screen Size Settings */
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .card {

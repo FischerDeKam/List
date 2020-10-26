@@ -225,6 +225,14 @@ function closeSubitemNav() {
   document.getElementById('subitemSidenav').style.width = "0";
 }
 
+function openSettingsNav() {
+  document.getElementById('settingsSidenav').style.width = "100%";
+}
+
+function closeSettingsNav() {
+  document.getElementById('settingsSidenav').style.width = "0";
+}
+
 // Snackbar
 function displayLoadSnackbar() {
   var x = document.getElementById('loadDataSnackbar');
