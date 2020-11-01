@@ -1,9 +1,6 @@
 body {
   font-family: 'Anton', sans-serif; 
 }
-a {
-  color: #607D8B;
-}
 
 .title {
   text-align: center;
@@ -25,10 +22,8 @@ a {
   z-index: 1;
   top: 0em;
   left: 0em;
-  background-color: #111;
   overflow-x: hidden;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  color: white;
   opacity: 1;
 }
 .sidenav .closebtn {
