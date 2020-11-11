@@ -1,6 +1,6 @@
 var listType = '';
 var subItemIndex = 0;
-var listBadge = 0;
+// var listBadge = 0;
 
 // On init
 function appStart(type) {
@@ -21,10 +21,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
-      var savedGroceryListBadge = localStorage.getItem('SavedGroceryListBadge');
-      if (savedGroceryListBadge) {
-        document.getElementById('count-badge').innerHTML = savedGroceryListBadge;
-      }
+      // var savedGroceryListBadge = localStorage.getItem('SavedGroceryListBadge');
+      // if (savedGroceryListBadge) {
+      //   document.getElementById('count-badge').innerHTML = savedGroceryListBadge;
+      // }
       break;
     case 'Chores':
       var loadSavedList = localStorage.getItem('SavedChoresList');
@@ -36,10 +36,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
-      var savedChoresListBadge = localStorage.getItem('SavedChoresListBadge');
-      if (savedChoresListBadge) {
-        document.getElementById('count-badge').innerHTML = savedChoresListBadge;
-      }
+      // var savedChoresListBadge = localStorage.getItem('SavedChoresListBadge');
+      // if (savedChoresListBadge) {
+      //   document.getElementById('count-badge').innerHTML = savedChoresListBadge;
+      // }
       break;
     case 'ToDo':
       var loadSavedList = localStorage.getItem('SavedToDoList');
@@ -51,10 +51,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
-      var savedToDoListBadge = localStorage.getItem('SavedToDoListBadge');
-      if (savedToDoListBadge) {
-        document.getElementById('count-badge').innerHTML = savedToDoListBadge;
-      }
+      // var savedToDoListBadge = localStorage.getItem('SavedToDoListBadge');
+      // if (savedToDoListBadge) {
+      //   document.getElementById('count-badge').innerHTML = savedToDoListBadge;
+      // }
       break;
     case 'Other':
       var loadSavedList = localStorage.getItem('SavedOtherList');
@@ -66,10 +66,10 @@ function load() {
         document.getElementById('listLastSaveDate').innerHTML = savedLastSaveDate;
         displayLoadSnackbar();
       }
-      var savedOtherListBadge = localStorage.getItem('SavedOtherListBadge');
-      if (savedOtherListBadge) {
-        document.getElementById('count-badge').innerHTML = savedOtherListBadge;
-      }
+      // var savedOtherListBadge = localStorage.getItem('SavedOtherListBadge');
+      // if (savedOtherListBadge) {
+      //   document.getElementById('count-badge').innerHTML = savedOtherListBadge;
+      // }
       break;
     default:
       console.log('load(): Type Error: ', listType);
@@ -84,34 +84,34 @@ function save() {
     var listToSave = document.getElementById('display-table').innerHTML;
     var d = new Date();
     listLastSaveDate = d.toLocaleString();
-    getBadgeValue();
+    // getBadgeValue();
     switch(listType) {
       case 'Grocery':
         localStorage.setItem('SavedGroceryList', listToSave);
         localStorage.setItem('GroceryListLastSaveDate', listLastSaveDate);
-        localStorage.setItem('SavedGroceryListBadge', listBadge);
+        // localStorage.setItem('SavedGroceryListBadge', listBadge);
         break;
       case 'Chores':
         localStorage.setItem('SavedChoresList', listToSave);
         localStorage.setItem('ChoresListLastSaveDate', listLastSaveDate);
-        localStorage.setItem('SavedChoresListBadge', listBadge);
+        // localStorage.setItem('SavedChoresListBadge', listBadge);
         break;
       case 'ToDo':
         localStorage.setItem('SavedToDoList', listToSave);
         localStorage.setItem('ToDoListLastSaveDate', listLastSaveDate);
-        localStorage.setItem('SavedToDoListBadge', listBadge);
+        // localStorage.setItem('SavedToDoListBadge', listBadge);
         break;
       case 'Other':
         localStorage.setItem('SavedOtherList', listToSave);
         localStorage.setItem('OtherListLastSaveDate', listLastSaveDate);
-        localStorage.setItem('SavedOtherListBadge', listBadge);
+        // localStorage.setItem('SavedOtherListBadge', listBadge);
         break;
       default:
         console.log('save(): Type Error: ', listType);
         break;
     }
     document.getElementById('listLastSaveDate').innerHTML = listLastSaveDate;
-    document.getElementById('count-badge').innerHTML = listBadge;
+    // document.getElementById('count-badge').innerHTML = listBadge;
     displaySaveSnackbar();
   }
 }
@@ -126,33 +126,33 @@ function deleteList() {
     dateToDelete = '';
     document.getElementById('display-table').innerHTML = listToDelete;
     document.getElementById('listLastSaveDate').innerHTML = dateToDelete;
-    getBadgeValue();
+    // getBadgeValue();
     switch(listType) {
       case 'Grocery':
         localStorage.setItem('SavedGroceryList', listToDelete);
         localStorage.setItem('GroceryListLastSaveDate', dateToDelete);
-        localStorage.setItem('SavedGroceryListBadge', listBadge);
+        // localStorage.setItem('SavedGroceryListBadge', listBadge);
         break;
       case 'Chores':
         localStorage.setItem('SavedChoresList', listToDelete);
         localStorage.setItem('ChoresListLastSaveDate', dateToDelete);
-        localStorage.setItem('SavedChoresListBadge', listBadge);
+        // localStorage.setItem('SavedChoresListBadge', listBadge);
         break;
       case 'ToDo':
         localStorage.setItem('SavedToDoList', listToDelete);
         localStorage.setItem('ToDoListLastSaveDate', dateToDelete);
-        localStorage.setItem('SavedToDoListBadge', listBadge);
+        // localStorage.setItem('SavedToDoListBadge', listBadge);
         break;
       case 'Other':
         localStorage.setItem('SavedOtherList', listToDelete);
         localStorage.setItem('OtherListLastSaveDate', dateToDelete);
-        localStorage.setItem('SavedOtherListBadge', listBadge);
+        // localStorage.setItem('SavedOtherListBadge', listBadge);
         break;
       default:
         console.log('load(): Type Error: ', listType);
       break;
     }
-    document.getElementById('count-badge').innerHTML = listBadge;
+    // document.getElementById('count-badge').innerHTML = listBadge;
     displayDeleteSnackbar();
   }
 }
@@ -196,16 +196,16 @@ function addSubitem() {
 }
 
 // Badge
-function getBadgeValue() {
-  var table = document.getElementById('display-table');
-  if (table) {
-    listBadge = table.rows.length;
-  } else {
-    listBadge = 0;
-  }
-  var badge = document.getElementById('count-badge').innerHTML;
-  badge.innerHTML = listBadge;
-}
+// function getBadgeValue() {
+//   var table = document.getElementById('display-table');
+//   if (table) {
+//     listBadge = table.rows.length;
+//   } else {
+//     listBadge = 0;
+//   }
+//   var badge = document.getElementById('count-badge').innerHTML;
+//   badge.innerHTML = listBadge;
+// }
 
 // Sidenav
 function openNav() {

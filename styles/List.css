@@ -69,7 +69,7 @@ hr {
   vertical-align: middle;
   border-radius: 2px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 30px;
   left: 50%;
   font-size: 26px;
@@ -116,6 +116,25 @@ hr {
 }
 .app-header-table {
   width: 100%;
+}
+/* Fixed headers and content */
+.header {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  z-index: 1;
+}
+.content {
+  position: relative;
+  top: 7.35em;
+  left: 0em;
+  overflow: auto;
+  margin-bottom: 4em;
+}
+.footer {
+  position: fixed;
+  bottom: 0em;
+  left: 0em;
 }
 /* Bootstrap Badge */
 .badge {
@@ -266,6 +285,42 @@ hr {
 }
 
 /* Screen Size Settings */
+/* Tiny devices (Galaxy Fold, 280px or less) */
+@media screen and (max-width: 280px) {
+  #date-table h3 {
+    font-size: 1em;
+  }
+  #display-table td {
+    width: 58%;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .content {
+    top: 7em;
+  }
+}
+
+/* Tiny devices (iphone 5/SE, 281px-320px) */
+@media screen and (min-width: 281px) and (max-width: 320px) {
+  #date-table h3 {
+    font-size: 1em;
+  }
+  #display-table td {
+    width: 64%;
+  }
+  .content {
+    top: 6.75em;
+  }
+}
+
+/* Tiny devices (Moto G4, Galaxy S5, 321px-360px) */
+@media screen and (min-width: 321px) and (max-width: 360px) {
+  #display-table td {
+    width: 68%;
+  }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (orientation: landscape) and (min-width: 576px) {
   #display-table td {

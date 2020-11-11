@@ -17,7 +17,7 @@
 <body onload="appStart('Grocery')" class="bg-dark">
   <div id="saveSnackbar">Saved!</div>
   <div id="loadDataSnackbar">Restored!</div>
-  <div>
+  <div class="header w-100 bg-dark">
     <table class="app-header-table text-info">
       <tr>
         <th class="menu-button pl-3">
@@ -30,7 +30,7 @@
         </th>
         <th class="list-label">
           <div class="title">Groceries
-            <span id="count-badge" class="badge badge-dark align-middle"></span>
+            <!-- <span id="count-badge" class="badge badge-dark align-middle"></span> -->
           </div>
         </th>
         <th class="save-button pr-3">
@@ -43,8 +43,7 @@
         </th>
       </tr>
     </table>
-    <hr>
-    <table id="date-table" callspacing="0" class="mt-2 text-info">
+    <table id="date-table" callspacing="0" class="mt-0 text-info">
       <tr>
         <td class="list-saved-date-label pl-3">
           <h3>List Saved:</h3>
@@ -54,7 +53,26 @@
         </td>
       </tr>
     </table>
+  </div>
+  <div class="content w-100">
     <table id="display-table" cellspacing="0" class="text-info text-break">
+    </table>
+  </div>
+  <div class="footer w-100">
+    <table class="input-table bg-dark">
+      <tr>
+        <td class="input-label-cell text-info">Item</td>
+        <td class="input-box-cell">
+          <input type="text" id="listItem" class="form-control" type="text">
+        </td>
+        <td class="input-add-cell">
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="addRow()" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </td>
+      </tr>
     </table>
   </div>
   <div id="mySidenav" class="sidenav bg-dark">
@@ -148,23 +166,6 @@
       </tr>
     </table>
   </div>
-  <div>
-    <table class="input-table bg-dark">
-      <tr>
-        <td class="input-label-cell text-info">Item</td>
-        <td class="input-box-cell">
-          <input type="text" id="listItem" class="form-control" type="text">
-        </td>
-        <td class="input-add-cell">
-          <svg xmlns="http://www.w3.org/2000/svg" onclick="addRow()" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAF50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-        </td>
-      </tr>
-    </table>
-  </div>
   <div id="subitemSidenav" class="subitemSidenav bg-dark">
     <h1 class="title text-info">Subitem</h1>
     <svg xmlns="http://www.w3.org/2000/svg" onclick="closeSubitemNav()" class="closebtn" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#dc3545" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -206,7 +207,7 @@
               <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
             </svg>
             <div class="card-body">
-              <a onclick="load()" class="btn btn-lg btn-dark btn-outline-info btn-block">Restore List</a>
+              <a onclick="load()" class="btn btn-lg btn-dark btn-outline-info btn-block">Reload Last Save</a>
             </div>
           </div>
         </td>

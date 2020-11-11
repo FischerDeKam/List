@@ -62,6 +62,26 @@ body {
 }
 
 /* Screen Size Settings */
+/* Tiny devices (Galaxy Fold, 280px or less) */
+@media screen and (max-width: 280px) {
+  .sidenav .title {
+    font-size: 2em;
+  }
+  .sidenav h1 {
+    padding-top: 0.5em;
+  }
+}
+
+/* Tiny devices (iphone 5/SE, 281px-320px) */
+@media screen and (min-width: 281px) and (max-width: 320px) {
+  .sidenav .title {
+    font-size: 2em;
+  }
+  .sidenav h1 {
+    padding-top: 0.5em;
+  }
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .card {
