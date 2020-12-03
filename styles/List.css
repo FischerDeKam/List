@@ -148,6 +148,12 @@ hr {
   width: 3em;
   height: 3em;
 }
+.card-header {
+  font-size: 1.25em;
+}
+.card-body {
+  font-size: 1.2em;
+}
 /* Input */
 .input-table {
   height: 4em;
@@ -206,7 +212,6 @@ hr {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  color: white;
   opacity: 1;
 }
 .sidenav .closebtn {
@@ -232,7 +237,6 @@ hr {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  color: white;
   opacity: 1;
 }
 .subitemSidenav h1 {
@@ -301,7 +305,7 @@ hr {
   }
 }
 
-/* Tiny devices (iphone 5/SE, 281px-320px) */
+/* Tiny devices (iPhone 5/SE, 281px-320px) */
 @media screen and (min-width: 281px) and (max-width: 320px) {
   #date-table h3 {
     font-size: 1em;

@@ -14,6 +14,20 @@ body {
   top: 0.5em;
   right: 0.5em;
 }
+/* Fixed headers and content */
+.header {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  z-index: 1;
+}
+.content {
+  position: relative;
+  top: 7.35em;
+  left: 0em;
+  overflow: auto;
+  margin-bottom: 4em;
+}
 /* Sidenav */
 .sidenav {
   height: 100%;
