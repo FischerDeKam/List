@@ -129,7 +129,7 @@ hr {
   top: 7.35em;
   left: 0em;
   overflow: auto;
-  margin-bottom: 4em;
+  padding-bottom: 4em;
 }
 .footer {
   position: fixed;
